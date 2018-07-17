@@ -41,7 +41,7 @@
 							Menu<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="/userList">사용자목록</a></li>
+							<li><a href="#">Action</a></li>
 							<li><a href="#">Another action</a></li>
 							<li><a href="#">Something else here</a></li>
 							<li class="divider"></li>
@@ -70,8 +70,30 @@
 	
 	<div class="container" style="margin-top:50px; padding:50px;">
 	
-		<h1>Hello, World</h1>
+		<div style="border-bottom: 2px solid #ffe6ff; margin-bottom: 24px;">
+			<h3>
+				<strong style="color:grey">사용자목록</strong>
+			</h3>
+		</div>
 	
+		<table class="table">
+			<thead>
+				<tr>
+					<th>사용자아이디</th>
+					<th>이름</th>
+					<th>이메일</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#users}}
+					<tr>
+						<td>{{userId}}</td>
+						<td>{{userName}}</td>
+						<td>{{userEmail}}</td>
+					</tr>
+				{{/users}}
+			</tbody>
+		</table>
 	</div>
 
 </body>
