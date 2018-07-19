@@ -1,10 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+	<title>메인</title>
+	
+	<!-- 합쳐지고 최소화된 최신 CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	
+	<!-- 부가적인 테마 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	
+	<!-- jQuery -->
+	<script src="/webjars/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+	<!-- font & animate.css -->
+	<link rel="stylesheet" type="text/css" href="/common/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="/common/lib/animate.css" />
+	
+	<!-- loginForm.css -->
+	<link rel="stylesheet" href="/common/css/loginForm.css" />
 </head>
-<body>
 
+<body style="background-color:#10abfd;">
+	
+	<div class="login-container">
+        <div class="login-form-wrapper">
+            <form class="login-form" id="loginForm" action="/login" method="post">
+                <div class="login-header title-img-wrapper">
+                    <!-- <h1 class="main-title-word">안녕</h1> -->
+                    <img src="/common/imgs/bear.png" style="width:25%;"/>
+                </div>
+
+                <div class="wrap-input100">
+                    <input class="input100" type="text" name="userId" placeholder="아이디를 입력하세요.">
+                    <span class="focus-input100" data-icon="&#xf206;"></span>
+                </div>
+
+                <div class="wrap-input100" style="margin-top: 14px;">
+                    <input class="input100" type="password" name="userPassword" placeholder="비밀번호를 입력하세요.">
+                    <span class="focus-input100" data-icon="&#xf190;"></span>
+                </div>
+
+                <div class="login-btn-wrap">
+                    <button type="submit" class="btn login-btn">로그인</button>
+                    <button type="button" class="btn sign-up-btn" id="signUpBtn">회원가입</button>
+                </div>
+            </form>
+
+
+            <form class="sign-up-form" id="signUpForm">
+
+                <div class="wrap-input100">
+                    <input class="input100" type="text" name="username" placeholder="아이디를 입력하세요.">
+                    <span class="focus-input100" data-icon="&#xf206;"></span>
+                </div>
+
+                <div class="wrap-input100" style="margin-top: 14px;">
+                    <input class="input100" type="password" name="pass" placeholder="비밀번호를 입력하세요.">
+                    <span class="focus-input100" data-icon="&#xf190;"></span>
+                </div>
+
+                <div class="wrap-input100" style="margin-top: 14px;">
+                    <input class="input100" type="password" name="re-pass" placeholder="비밀번호를 재입력하세요.">
+                    <span class="focus-input100" data-icon="&#xf190;"></span>
+                </div>
+
+                <div class="login-btn-wrap">
+                    <button type="button" class="btn sign-btn">가입</button>
+                    <button type="button" class="btn cancel-btn" id="cancelBtn">취소</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
 </body>
+<script>
+    $(document).ready(function(){
+    	
+        $("#signUpBtn").click(function(){
+            $(".login-form").css("display", "none");
+            $(".sign-up-form").css("display", "block");
+            $('#signUpForm').addClass('animated bounceInDown');
+        });
+
+        $("#cancelBtn").click(function(){
+            $(".login-form").css("display", "block");
+            $(".sign-up-form").css("display", "none");
+            $('#loginForm').addClass('animated bounceInDown');
+        });
+    });
+</script>
 </html>

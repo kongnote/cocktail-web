@@ -18,61 +18,88 @@
 	
 	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<nav class="navbar navbar-fixed-top" style="background-color: #ffe6ff !important;">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="border: 2px solid #fff;">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar" style="background-color:#fff;"></span> 
-					<span class="icon-bar" style="background-color:#fff;"></span>
-					<span class="icon-bar" style="background-color:#fff;"></span>
-				</button>
-				<a class="navbar-brand" href="/index.html">Brand</a>
-			</div>
+	
+	<!-- font & animate.css -->
+	<link rel="stylesheet" type="text/css" href="/common/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="/common/lib/animate.css" />
+	
+	<!-- loginForm.css -->
+	<link rel="stylesheet" href="/common/css/loginForm.css" />
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-							Menu<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="/userList">사용자목록</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-							<li class="divider"></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul>
-					</li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-expanded="false">Settings
-							<span class="caret"></span>
-					</a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul></li>
-					<li><a href="/registerForm.html">Sign Up</a></li>
-					<li><a href="/loginForm.html">Sign in</a></li>
-				</ul>
+	<style>
+	.svg-wrapper {
+	  height: 60px;
+	    margin: 0 auto;
+	  position: relative;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  width: 320px;
+	}
+	
+	.shape {
+	  fill: transparent;
+	  stroke-dasharray: 140 540;
+	  stroke-dashoffset: -474;
+	  stroke-width: 8px;
+	  /* stroke: #19f6e8; */
+	  stroke: #fff;
+	}
+	
+	.text {
+	  color: #fff;
+	  font-family: 'Roboto Condensed';
+	  font-size: 24px;
+	  letter-spacing: 8px;
+	  line-height: 32px;
+	  position: relative;
+	  top: -52px;
+	  text-align: center;
+	}
+	
+	@keyframes draw {
+	  0% {
+	    stroke-dasharray: 140 540;
+	    stroke-dashoffset: -474;
+	    stroke-width: 8px;
+	  }
+	  100% {
+	    stroke-dasharray: 760;
+	    stroke-dashoffset: 0;
+	    stroke-width: 2px;
+	  }
+	}
+	
+	.svg-wrapper:hover .shape {
+	  -webkit-animation: 0.5s draw linear forwards;
+	  animation: 0.5s draw linear forwards;
+	}
+	</style>
+</head>
+<body style="background-color:#10abfd;">
+	
+	<div class="container" style="margin-top:50px; padding:50px; display: flex; justify-content:center; align-items:center;">
+		<div style="margin-top: 32vh;">
+			<div class="svg-wrapper">
+			  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+			    <rect class="shape" height="60" width="320" />
+			  </svg>
+			  <div class="text">안녕, 새롬아</div>
 			</div>
 		</div>
-	</nav>
-	
-	<div class="container" style="margin-top:50px; padding:50px;">
-	
-		<h1>Hello, World</h1>
-	
 	</div>
 
 </body>
+<script>
+	$(document).ready(function(){
+		
+		$(".svg-wrapper").click(function(){
+			$(".text").text("생일축하해!");
+			setTimeout(moveToLogin, 2000);
+		});
+		
+		function moveToLogin() {
+			location.href = "/loginForm.html";
+		}
+	});
+</script>
 </html>
