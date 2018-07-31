@@ -1,7 +1,19 @@
-package com.cocktail_web.web;
+package com.cocktail_web.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 	//
+	// primary key
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	@Column(nullable=false, length=50)
 	private String userId;
 	private String userPassword;
 	private String userName;
@@ -37,6 +49,12 @@ public class User {
 
 	public void setUserEmail(String userEmail) {
 		this.userEmail = userEmail;
+	}
+	
+	public void update(User newUser) {
+		this.userName = newUser.getUserName();
+		this.userPassword = newUser.getUserPassword();
+		this.userEmail = newUser.getUserEmail();
 	}
 	
 }
