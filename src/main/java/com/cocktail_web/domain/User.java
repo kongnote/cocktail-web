@@ -1,19 +1,19 @@
 package com.cocktail_web.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+//import javax.persistence.Column;
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.Id;
 
-@Entity
+//@Entity
 public class User {
 	//
 	// primary key
-	@Id
-	@GeneratedValue
+//	@Id
+//	@GeneratedValue
 	private Long id;
 	
-	@Column(nullable=false, length=50)
+//	@Column(nullable=false, length=50)
 	private String userId;
 	private String userPassword;
 	private String userName;
