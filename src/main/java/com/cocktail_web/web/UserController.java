@@ -58,8 +58,8 @@ public class UserController {
 //		return "";
 //	}
 //	
-//	// get 방식
-//	// form에서 넘긴 name 값으로 매핑된다.
+	// get 방식
+	// form에서 넘긴 name 값으로 매핑된다.
 //	@GetMapping("/create")
 //	public String create(Model model, String userId, String userPassword, String userEmail) {
 //		
