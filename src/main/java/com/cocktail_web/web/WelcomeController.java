@@ -20,4 +20,13 @@ public class WelcomeController {
 		// template directory 하위에 있는 파일을 호출하게 된다. ex) welcome.html 파일을 찾는다.
 		return "welcome";
 	}
+	
+	// 특정파일 호출의 용도
+	@GetMapping("/wedding")
+	public String wedding(Model model) {
+		
+
+		// template directory 하위에 있는 파일을 호출하게 된다. ex) welcome.html 파일을 찾는다.
+		return "wedding";
+	}
 }
