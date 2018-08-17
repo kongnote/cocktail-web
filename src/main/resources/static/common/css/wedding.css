@@ -2,12 +2,15 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 /* 
-분홍 : #e3c3d2 (225, 195, 210)
-연분홍 : #f5eaea
-드레스 색 : #e4e5e0
+遺꾪솉 : #e3c3d2 (225, 195, 210)
+�뿰遺꾪솉 : #f5eaea
+�뱶�젅�뒪 �깋 : #e4e5e0
 
 */
 
+@font-face { font-family: 'NanumGothic'; src: url(../fonts/Goyang.ttf) format('truetype'); } 
+
+body { font-family: NanumGothic; }
 
 body {
 padding-bottom: 40px;
@@ -57,15 +60,14 @@ z-index: 10;
 /* Declare heights because of positioning of img element */
 .carousel .item {
 height: 440px;
-background-color: #e4e5e0;
+background-color: #fff;
 }
 .carousel-inner > .item > img {
 position: absolute;
-top: 0;
+top: 20px;
 left: 0;
 min-width: 100%;
 height: 440px;
-opacity: 0.75;
 }
 
 
