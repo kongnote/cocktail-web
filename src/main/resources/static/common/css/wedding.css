@@ -67,7 +67,7 @@ background-color: #fff;
 .carousel-inner > .item > img {
 	position: absolute;
 	top: 0px;
-	left: 0;
+	/* left: 0; */
 	height: 500px;
 	margin-top: 50px;
 }
@@ -147,5 +147,24 @@ letter-spacing: -1px;
 
 a {
     color: #515151;
+}
+
+.gallery_intro_wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.gallery_intro_wrap div {
+	width: 50%;
+}
+
+@media (min-width: 1024px) {
+	.map-wrapper {
+	    margin-top: 250px;
+	}
+}
+
+.wedding-gallery-detail-wrapper div {
+	margin-bottom: 24px;
 }
   
