@@ -29,4 +29,13 @@ public class WelcomeController {
 		// template directory 하위에 있는 파일을 호출하게 된다. ex) welcome.html 파일을 찾는다.
 		return "wedding";
 	}
+	
+	// 특정파일 호출의 용도
+	@GetMapping("/SheSaidYes/en")
+	public String weddingEn(Model model) {
+		
+
+		// template directory 하위에 있는 파일을 호출하게 된다. ex) welcome.html 파일을 찾는다.
+		return "wedding_en";
+	}
 }
