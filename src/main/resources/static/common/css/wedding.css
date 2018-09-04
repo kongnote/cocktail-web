@@ -8,9 +8,9 @@
 
 */
 
-@font-face { font-family: 'NanumMyeongjo'; src: url(../fonts/NanumMyeongjo.ttf) format('truetype'); }
+/* @font-face { font-family: 'NanumMyeongjo'; src: url(/commom/fonts/NanumMyeongjo.ttf) format('truetype'); } */
 
-body { font-family: 'NanumMyeongjo' !important; }
+body { font-family: serif !important; }
 
 body {
 padding-bottom: 40px;
@@ -65,7 +65,7 @@ width: auto;
 /* Carousel base class */
 .carousel {
 height: 500px;
-margin-bottom: 60px;
+margin-bottom: 80px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -173,12 +173,36 @@ a {
 	width: 50%;
 }
 
+.cover-img {
+	width : 100%;
+}
+
+.location-img {
+	margin-bottom: 80px;
+}
+
 @media (min-width: 1024px) {
 	.map-wrapper {
-	    margin-top: 150px;
+	    margin-top: 135px;
+	}
+	
+	.cover-img {
+		width : 45%;
+	}
+	
+	.location-img {
+		margin-bottom: 0px;
 	}
 }
 
 .wedding-gallery-detail-wrapper div {
 	margin-bottom: 24px;
 }
+
+.sh-flex-item {
+	display: -webkit-box !important;
+	display: -ms-flexbox !important;
+	display: flex !important;
+	justify-content:center;
+}
+
