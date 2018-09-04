@@ -10,7 +10,7 @@
 
 /* @font-face { font-family: 'NanumGothic'; src: url(../fonts/Goyang.ttf) format('truetype'); }  */
 
-body { font-family: serif; }
+body { font-family: serif !important; }
 
 body {
 padding-bottom: 40px;
