@@ -22,7 +22,7 @@ public class WelcomeController {
 	}
 	
 	// 특정파일 호출의 용도
-	@GetMapping("/SheSaidYes")
+	@GetMapping("/Shesaidyes")
 	public String wedding(Model model) {
 		
 
@@ -31,7 +31,7 @@ public class WelcomeController {
 	}
 	
 	// 특정파일 호출의 용도
-	@GetMapping("/SheSaidYes/en")
+	@GetMapping("/Shesaidyes/en")
 	public String weddingEn(Model model) {
 		
 
