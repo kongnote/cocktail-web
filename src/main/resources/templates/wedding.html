@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta property="og:image"
 	content="http://kongnote.com/common/imgs/wdetail/wedding_2_r.jpg">
+<meta property="og:title" content="박성연 · 김민주의 결혼식에 초대합니다.">
+<meta property="og:description" content="클릭하시면 연결됩니다.">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -157,8 +159,8 @@
 					style="width: 25%; margin-bottom: 80px;">
 			</div>
 
-			<div class="col-md-5 move-gallery">
-				<div
+			<div class="col-md-5">
+				<div class="move-gallery"
 					style="text-align: center; padding:12px;">
 					<label style="color:#777">더 많은 사진 보기 Click!</label>
 				</div>
@@ -291,17 +293,9 @@
 	 			moveToGalleryDetail();
 			});
 			
-			$(".move-gallery").bind('touchstart', function(e) {
-
-				moveToGalleryDetail();
-				e.preventDefault();	//	이벤트취소
-
-			});
-			
 	 		function moveToGalleryDetail() {
 	 			location.href = "/wedding_gallery.html?lang=kr";
 	 		}
-	 		
 	 		
 		})
 		
