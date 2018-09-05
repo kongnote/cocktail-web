@@ -150,7 +150,7 @@ letter-spacing: -1px;
 }
 }
 
-a {
+.nav a {
     color: #5a5a5a !important;
     background-color : #f5eaea !important;
 }
