@@ -1,16 +1,6 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-/* 
-遺꾪솉 : #e3c3d2 (225, 195, 210)
-�뿰遺꾪솉 : #f5eaea
-�뱶�젅�뒪 �깋 : #e4e5e0
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 
-*/
-
-/* @font-face { font-family: 'NanumMyeongjo'; src: url(/commom/fonts/NanumMyeongjo.ttf) format('truetype'); } */
-
-body { font-family: serif !important; }
+body { font-family: 'Nanum Myeongjo', serif; }
 
 body {
 padding-bottom: 40px;
