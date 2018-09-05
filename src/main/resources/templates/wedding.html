@@ -45,7 +45,7 @@
 			<nav class="navbar navbar-static-top"
 				style="background-color: #f5eaea; color: #5a5a5a !important;">
 				<div class="container">
-					<div class="navbar-header">
+					<!-- <div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed"
 							data-toggle="collapse" data-target="#navbar"
 							aria-expanded="false" aria-controls="navbar"
@@ -55,12 +55,13 @@
 								class="icon-bar" style="background-color: grey;"></span> <span
 								class="icon-bar" style="background-color: grey;"></span>
 						</button>
-						<!-- <a class="navbar-brand" href="#">Project name</a> -->
-					</div>
-					<div id="navbar" class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
+						<a class="navbar-brand" href="#">Project name</a>
+					</div> -->
+					<div id="navbar">
+						<ul class="nav navbar-nav" style="display:flex;">
 							<li class="active"><a href="/Shesaidyes">Home</a></li>
-							<li><a href="/wedding_gallery.html">Gallery</a></li>
+							<li><a href="#" onclick="scrolling('.gallery-area')">Gallery</a></li>
+							<li><a href="#" onclick="scrolling('.location-area')">Location</a></li>
 						</ul>
 					</div>
 				</div>
@@ -121,25 +122,24 @@
 
 		<!-- Three columns of text below the carousel -->
 		<div class="row">
-			<div class="col-lg-6"
+			<div class="col-lg-12"
 				style="text-align: center; margin-bottom: 48px;">
-				<img class="img-circle" src="/common/imgs/introduce_sy_r.jpg"
-					alt="Generic placeholder image" width="140" height="140">
-				<h3 style="color:#777;">신랑</h3>
-				<h3 style="color:#777;">
+				<!-- <img class="img-circle" src="/common/imgs/introduce_sy_r.jpg"
+					alt="Generic placeholder image" width="140" height="140"> -->
+				<h4 style="color:#777;">
 					박덕종 · 김옥희 <small>의 장남</small>
-				</h3>
-				<h2>박 성 연</h2>
+				</h4>
+				
+				<h3> <small>신랑</small> 박 성 연</h3>
 			</div>
 			<!-- /.col-lg-4 -->
-			<div class="col-lg-6" style="text-align: center;">
-				<img class="img-circle" src="/common/imgs/introduce_mj_r.jpg"
-					alt="Generic placeholder image" width="140" height="140">
-				<h3 style="color:#777;">신부</h3>
-				<h3 style="color:#777;">
+			<div class="col-lg-12" style="text-align: center;">
+				<!-- <img class="img-circle" src="/common/imgs/introduce_mj_r.jpg"
+					alt="Generic placeholder image" width="140" height="140"> -->
+				<h4 style="color:#777;">
 					김성덕 · 서동신 <small>의 장녀</small>
-				</h3>
-				<h2>김 민 주</h2>
+				</h4>
+				<h3><small>신부</small> 김 민 주</h3>
 			</div>
 			<!-- /.col-lg-4 -->
 		</div>
@@ -147,7 +147,7 @@
 
 		<!-- START THE FEATURETTES -->
 
-		<hr class="featurette-divider">
+		<hr class="featurette-divider gallery-area">
 
 		<div class="row featurette">
 			<div class="col-md-7">
@@ -157,7 +157,11 @@
 					style="width: 25%; margin-bottom: 80px;">
 			</div>
 
-			<div class="col-md-5">
+			<div class="col-md-5 move-gallery">
+				<div
+					style="text-align: center; padding:12px;">
+					<label style="color:#777">더 많은 사진 보기 Click!</label>
+				</div>
 				<div class="gallery_intro_wrap">
 					<div>
 						<img class="featurette-image img-responsive center-block"
@@ -195,15 +199,12 @@
 					</div>
 
 				</div>
-				<div class="move-gallery"
-					style="text-align: center; margin-top: 24px;">
-					<label style="font-family: san-serif; color:#777">더 많은 사진 보기 Click!</label>
-				</div>
+				
 			</div>
 
 		</div>
 
-		<hr class="featurette-divider">
+		<hr class="featurette-divider location-area">
 
 		<div class="row featurette">
 			<div class="col-md-7">
@@ -278,14 +279,30 @@
 		
 	    })
 		
+		function scrolling(pos) {
+			console.log(pos)
+			console.log($(pos).offset().top)
+			var targetLocationNum = $(pos).offset().top;
+ 	        $('html, body').animate({'scrollTop' : targetLocationNum + 'px'}, "slow");
+ 	    }
+		
 		$(document).ready(function(){
 			$(".move-gallery").click(function(){
 	 			moveToGalleryDetail();
 			});
 			
+			$(".move-gallery").bind('touchstart', function(e) {
+
+				moveToGalleryDetail();
+				e.preventDefault();	//	이벤트취소
+
+			});
+			
 	 		function moveToGalleryDetail() {
-	 			location.href = "/wedding_gallery.html";
+	 			location.href = "/wedding_gallery.html?lang=kr";
 	 		}
+	 		
+	 		
 		})
 		
 	</script>

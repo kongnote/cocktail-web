@@ -151,7 +151,8 @@ letter-spacing: -1px;
 }
 
 a {
-    color: #515151;
+    color: #5a5a5a !important;
+    background-color : #f5eaea !important;
 }
 
 .gallery_intro_wrap {

@@ -56,8 +56,7 @@
 					</div>
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="/Shesaidyes">Home</a></li>
-		                    <li><a href="/wedding_gallery.html">Gallery</a></li>
+							<li class="active"><a href="/Shesaidyes" class="home-menu">Home</a></li>
 						</ul>
 					</div>
 				</div>
@@ -67,7 +66,8 @@
 	</div>
 
 	<div class="container marketing">
-
+		<input type="hidden" id="lang"/>
+		
 		<hr class="featurette-divider" style="margin: 25px 0; border: 0px;">
 		<h2 class="featurette-heading" style="margin-bottom: 80px; margin-top:80px;">
 			WEDDING <span class="text-muted">GALLERY</span>
@@ -225,8 +225,6 @@
 
 	</div>
 
-	
-
 
 	<!-- FOOTER -->
 	<footer>
@@ -241,4 +239,16 @@
 
 	</div>
 	<!-- /.container -->
+	<script>
+		$(document).ready(function(){
+			console.log(window.location.search)
+			var param = window.location.search.split("=")[1];
+			console.log(param);
+			if(param === "en") {
+				$(".home-menu").attr("href", "/Shesaidyes/en");
+			} else {
+				$(".home-menu").attr("href", "/Shesaidyes");
+			}
+		});
+	</script>
 </html>
