@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta property="og:image"
-	content="http://kongnote.com/common/imgs/wdetail/wedding_2_r.jpg">
+	content="http://kongnote.com/common/imgs/wdetail/image_2.jpg">
 <meta property="og:title" content="박성연 · 김민주의 결혼식에 초대합니다.">
 <meta property="og:description" content="클릭하시면 연결됩니다.">
 <meta name="viewport"
@@ -41,7 +41,6 @@
 
 <body oncontextmenu="return false" ondragstart="return false"
 	onselectstart="return false">
-	
 	<div class="navbar-wrapper">
 		<div class="container">
 
@@ -94,7 +93,7 @@
 				<img class="cover-img featurette-image img-responsive center-block"
 					data-src="holder.js/500x500/auto" alt="500x500"
 					src="/common/imgs/wedding_card_intro_en.png"
-					data-holder-rendered="true" style="margin-top:55px;">
+					data-holder-rendered="true" style="margin-top:80px;">
 			</div>
 		</div>
 
@@ -110,7 +109,7 @@
 					분들을 정중히 초대합니다.</h4>
 				<img class="featurette-image img-responsive center-block"
 					data-src="holder.js/500x500/auto" alt="500x500"
-					src="/common/imgs/wdetail/wedding_17_r.jpg"
+					src="/common/imgs/wdetail/image_13.jpg"
 					data-holder-rendered="true" style="width: 85%;">
 			</div>
 			<div class="col-md-7">
@@ -129,20 +128,20 @@
 				style="text-align: center; margin-bottom: 48px;">
 				<!-- <img class="img-circle" src="/common/imgs/introduce_sy_r.jpg"
 					alt="Generic placeholder image" width="140" height="140"> -->
-				<h4 style="color:#777;">
+				<h5 style="color:#777;">
 					박덕종 · 김옥희 <small>의 장남</small>
-				</h4>
+				</h5>
 				
-				<h3> <small>신랑</small> 박 성 연</h3>
+				<h4> <small>신랑</small> 박 성 연</h4>
 			</div>
 			<!-- /.col-lg-4 -->
 			<div class="col-lg-12" style="text-align: center;">
 				<!-- <img class="img-circle" src="/common/imgs/introduce_mj_r.jpg"
 					alt="Generic placeholder image" width="140" height="140"> -->
-				<h4 style="color:#777;">
+				<h5 style="color:#777;">
 					김성덕 · 서동신 <small>의 장녀</small>
-				</h4>
-				<h3><small>신부</small> 김 민 주</h3>
+				</h5>
+				<h4><small>신부</small> 김 민 주</h4>
 			</div>
 			<!-- /.col-lg-4 -->
 		</div>
@@ -168,36 +167,36 @@
 				<div class="gallery_intro_wrap">
 					<div>
 						<img class="featurette-image img-responsive center-block"
-							src="/common/imgs/wdetail/wedding_16_r.jpg"
+							src="/common/imgs/wdetail/image_11.jpg"
 							data-holder-rendered="true">
 					</div>
 
-					<div style="opacity: 0.4;">
+					<div style="opacity: 0.8;">
 						<img class="featurette-image img-responsive center-block"
-							src="/common/imgs/wdetail/wedding_5_r.jpg"
+							src="/common/imgs/wdetail/image_4_2.jpg"
 							data-holder-rendered="true">
 					</div>
 
-					<div style="opacity: 0.4;">
+					<div style="opacity: 0.8;">
 						<img class="featurette-image img-responsive center-block"
-							src="/common/imgs/wdetail/wedding_8_r.jpg"
+							src="/common/imgs/wdetail/image_1_2.jpg"
 							data-holder-rendered="true">
 					</div>
 
 					<div>
 						<img class="featurette-image img-responsive center-block"
-							src="/common/imgs/wdetail/wedding_12_r.jpg"
+							src="/common/imgs/wdetail/image_3.jpg"
 							data-holder-rendered="true">
 					</div>
 					<div>
 						<img class="featurette-image img-responsive center-block"
-							src="/common/imgs/wdetail/wedding_7_r.jpg"
+							src="/common/imgs/wdetail/image_10.jpg"
 							data-holder-rendered="true">
 					</div>
 
-					<div style="opacity: 0.6;">
+					<div style="opacity: 0.8;">
 						<img class="featurette-image img-responsive center-block"
-							src="/common/imgs/wdetail/wedding_11_r.jpg"
+							src="/common/imgs/wdetail/image_9.jpg"
 							data-holder-rendered="true">
 					</div>
 
@@ -218,7 +217,10 @@
 				<img
 					class="location-img featurette-image img-responsive center-block"
 					data-src="holder.js/500x500/auto" alt="500x500"
-					src="/common/imgs/location.png" data-holder-rendered="true">
+					src="/common/imgs/location_r.png" data-holder-rendered="true">
+					
+				<h5 class="text-muted" style="font-weight:bold; padding-left: 5px;">부산버스 : 교대역 한양프라자앞 9시출발</h5>
+				<h5 class="text-muted" style="font-weight:bold; margin-bottom: 80px; padding-left: 5px;">마산버스 : 마산역 아리랑관광호텔앞 9시출발</h5>
 
 			</div>
 			<div class="col-md-5 map-wrapper">
@@ -269,19 +271,6 @@
 		
 		marker.setMap(map);
 		
-		///
-		var mySwiper = new Swiper ('.swiper-container', {
-		    // Optional parameters
-		    direction: 'horizontal',
-		    loop: true,
-		
-		    // If we need pagination
-		    pagination: {
-		      el: '.swiper-pagination',
-		    },
-		
-	    })
-		
 		function scrolling(pos) {
 			console.log(pos)
 			console.log($(pos).offset().top)
@@ -297,7 +286,6 @@
 	 		function moveToGalleryDetail() {
 	 			location.href = "/wedding_gallery.html?lang=en";
 	 		}
-	 		
 	 		
 		})
 		
